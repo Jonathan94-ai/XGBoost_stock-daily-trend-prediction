@@ -10,11 +10,11 @@ from sklearn.metrics import accuracy_score, roc_auc_score, roc_curve
 
 
 def binary_class_classifier(current, future):
-
     if float(future) > float(current):
         return 1
     else:
         return 0
+
 def preprocess_df(df):
     for col in df.columns:                                #
         if col != 'target' and col != 'Overnight_Return'and col!= 'ROC' and col!= 'ForceIndex' and col!= 'Momentum' and col!= 'Volatility' : # Overnight_return is already in pct_change format
