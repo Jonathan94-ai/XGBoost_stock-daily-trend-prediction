@@ -6,7 +6,6 @@ import time
 from matplotlib import pyplot as plt
 from scipy.stats import linregress
 import xgboost as xgb
-from sklearn.ensemble import RandomForestClassifier
 from sklearn.metrics import accuracy_score, roc_auc_score, roc_curve
 
 
@@ -95,7 +94,7 @@ X_test,y_test = X_y_test.iloc[:,:-1], X_y_test.iloc[:,-1]
 
 #************************* Building the model **************************************************
 
-model = xgb.XGBClassifier() # RandomForestClassifier()
+model = xgb.XGBClassifier() 
 model.fit(X_train, y_train)
 y_pred = model.predict(X_test)
 y_pred_training = model.predict(X_train)
