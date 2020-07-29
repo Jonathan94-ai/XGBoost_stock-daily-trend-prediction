@@ -74,7 +74,7 @@ def Tech_Indicators(df):
 
 
 #********************* Preparing the data **********************************************
-df = pd.read_csv(f"AAPL.csv")
+df = pd.read_csv("AAPL.csv")
 df.set_index('Date', inplace = True)
 df.dropna(inplace = True)
 df = df[['Open','Close', 'Volume','High', 'Low']]
